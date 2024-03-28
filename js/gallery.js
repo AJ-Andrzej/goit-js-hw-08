@@ -69,6 +69,7 @@ container.addEventListener("click", showModal)
 
 function showModal(event) {
     event.preventDefault();
+    if(event.target === event.currentTarget) return
     const currentImgData = event.target.dataset.source;
     const instance = basicLightbox.create(`
     <img src="${currentImgData}" width="1000" height="800">
